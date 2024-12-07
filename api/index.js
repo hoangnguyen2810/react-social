@@ -6,6 +6,7 @@ import postRoutes from "./routes/posts.js";
 import commentRoutes from "./routes/comments.js";
 import likeRoutes from "./routes/likes.js";
 import relationshipRoutes from "./routes/relationships.js";
+import storyRoutes from "./routes/stories.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import multer from "multer";
@@ -43,6 +44,7 @@ app.use("/api/posts", postRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/likes", likeRoutes);
 app.use("/api/relationships", relationshipRoutes);
+app.use("/api/stories", storyRoutes);
 app.use("/upload", express.static("public/upload")); // Đảm bảo URL trỏ đến đúng thư mục public/upload
 
 app.listen(8800, () => {
